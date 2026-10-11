@@ -13,3 +13,87 @@ foreach (int grade in grades) {
     sum += grade;
 }
 Console.WriteLine($"Средний балл: {(double)sum / grades.Length}");
+
+string[] students = { "Аня", "Ярослав", "Вика" };
+int count = 0;
+foreach (string student in students) {
+    Console.WriteLine(student);
+    count++;
+}
+Console.WriteLine(count);
+
+int[] points = { 10, 20, 15 };
+
+for (int i = 0; i < points.Length; i++)
+{
+    points[i] = points[i] + 5;
+}
+foreach (int point in points) {
+    Console.WriteLine(point);
+}
+
+string[] students1 = { "Аня", "Борис", "Вика" };
+int number = 1;
+
+foreach  (string student in students1) {
+    Console.WriteLine($"{number}. {student}");
+    number++;
+}
+//самостоятельные задания
+//задача А
+int[] books = { 3, 5, 7, 2, 8 };
+int sum1 = 0;
+
+foreach (int book in books) {
+    Console.WriteLine(book);
+    sum1 += book;
+}
+Console.WriteLine(sum1);
+
+//задача В
+string name = "Анастасия";
+int count1 = 0;
+
+foreach (char letter in name) {
+    if ("Ааеёиоуыэюя".Contains(letter))
+{
+    count1++;
+}
+}
+Console.WriteLine(count1);
+
+// //индивидуальный вариант
+// Console.Write("Введите свою фамилию: ");
+// string surname = Console.ReadLine()!.Trim();
+// if (string.IsNullOrEmpty(surname)) {
+// Console.WriteLine("Фамилия не введена. Завершение работы.");
+// return;
+// }
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+// var assigned = Enumerable.Range(1, 10)
+// .OrderBy(_ => rnd.Next())
+// .Take(2)
+// .OrderBy(x => x)
+// .ToList();
+// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+
+//задача №7
+int[] grades1 = { 5, 4, 3, 5, 2, 3, 4 };
+int countt = 0;
+
+foreach (int grade1 in grades1) {
+    if (grade1 == 5) {
+        countt++;
+    }
+}
+Console.WriteLine(countt);
+
+//вариант 9
+int[] numberss = { 1, 2, 3, 4 };
+
+for (int b = 0; b < numberss.Length; b++) {
+    numberss[b] = numberss[b] + 1;
+}
+foreach (int numberr in numberss) {
+    Console.WriteLine(numberr);
+}
